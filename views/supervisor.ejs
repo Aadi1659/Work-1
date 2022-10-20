@@ -1,0 +1,16 @@
+<%- include('partials/header') -%>
+<h1>Super Visor Page</h1>
+<h2>To raise a request, enter the quantity and click the button</h2>
+<form action="#" method="post">
+    <input type="number" name="request" placeholder="Enter Quantity">
+    <input type="submit" value="Submit">
+</form>
+<h2 id="request"></h2>
+<h1>My Pending Requests</h1>
+<ul>
+    <% requests.forEach(function(element){ %>
+       <li>Quantity = <%=element.quantity%></li>
+    <% }) %>
+
+</ul>
+<%- include('partials/footer') -%>

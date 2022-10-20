@@ -1,0 +1,20 @@
+<%- include('partials/header') -%>
+
+<h1>Admin Page</h1>
+<h2>Requests</h2>
+<ul>
+    <% requests.forEach(function(element){ %>
+    <form action="/delete" method="post">
+       <li>Quantity = <%=element.quantity%></li>
+       <button name="list" type="submit" value="<%=element._id%>">Accept</button>
+    </form>
+    <% }) %>
+
+</ul>
+
+<h2>Accepted Responses</h2>
+
+
+
+
+<%- include('partials/footer') -%>
